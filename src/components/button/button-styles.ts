@@ -3,7 +3,7 @@ import { IPropsTheme } from "../../styles/theme";
 
 export const Container = styled.button<IPropsTheme>`
     width: 95%;
-    padding-block: 1.3rem;
+    padding-block: 2.3rem;
 
     display: flex;
     gap: 2rem;
@@ -16,6 +16,6 @@ export const Container = styled.button<IPropsTheme>`
     background-color: ${(props) => props.theme.COLORS.SECONDARY_ORANGE};
 
     color: white;
-    font-size: 1.4rem;
+    font-size: 2.4rem;
     text-shadow: 3px 1.5px 3px rgba(11, 27, 35, 0.97);
 `

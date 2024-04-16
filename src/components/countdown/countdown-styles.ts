@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { IPropsTheme } from "../../styles/theme";
 
 export const Container = styled.div<IPropsTheme>`
-    height: 3.5rem;
+    height: 4.8rem;
     width: 100vw;
     padding-bottom: .35rem;
     box-sizing: content-box;
@@ -27,11 +27,11 @@ export const Container = styled.div<IPropsTheme>`
         color: ${(props) => props.theme.COLORS.DARK_BLUE};
 
         > strong {
-            font-size: 1.4rem;
+            font-size: 2.3rem;
         }
 
         > span {
-            font-size: .9rem;
+            font-size: 1.7rem;
         }
     }
 `

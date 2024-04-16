@@ -6,7 +6,7 @@ export const Container = styled.div<IPropsTheme>`
     div:nth-child(2) {
         h1 {
             font-family: "Limelight", sans-serif;
-            font-size: 4rem;
+            font-size: 6rem;
             font-weight: 700;
             text-align: center;
             color: ${(props) => props.theme.COLORS.SECONDARY_ORANGE};
@@ -16,10 +16,10 @@ export const Container = styled.div<IPropsTheme>`
         }
 
         h2 {
-            width: 27rem;
+            width: 90%;
 
             text-align: center;
-            font-size: 1.8rem;
+            font-size: 2.7rem;
 
             background: linear-gradient(322deg, rgba(255,90,0,1) 9%, rgba(241,116,5,1) 43%, rgba(241,116,5,1) 58%, rgba(255,90,0,1) 91%);
             background-clip: text;

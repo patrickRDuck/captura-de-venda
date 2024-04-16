@@ -9,7 +9,7 @@ interface IPropsButton extends ComponentProps<"button"> {
 export function Button(props: IPropsButton) {
     return(
         <Container {...props}>
-            <FaRegArrowAltCircleRight size={20}  />
+            <FaRegArrowAltCircleRight size={29}  />
 
             <span>Quero me cadastrar</span>
         </Container>
