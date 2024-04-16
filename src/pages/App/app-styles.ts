@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { IPropsTheme } from "../../styles/theme";
 
 export const Container = styled.div<IPropsTheme>`
+
     div:nth-child(2) {
         h1 {
             font-family: "Limelight", sans-serif;
@@ -15,7 +16,7 @@ export const Container = styled.div<IPropsTheme>`
         }
 
         h2 {
-            width: 20rem;
+            width: 27rem;
 
             text-align: center;
             font-size: 1.8rem;

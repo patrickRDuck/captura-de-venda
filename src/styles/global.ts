@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle<IPropsTheme>`
     }
 
     ::-webkit-scrollbar-thumb {
-        background-color: ${props => props.theme.COLORS.DARK_BLUE};
+        background-color: ${props => props.theme.COLORS.MAIN_ORANGE};
         border-radius: 8px;
     }
 

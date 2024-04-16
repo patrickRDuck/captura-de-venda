@@ -6,12 +6,16 @@ export const Container = styled.div<IPropsTheme>`
     flex-direction: column;
     gap: 2rem;
     align-items: center;
-    justify-content: center;
 
-    padding-inline: 10%;
+    height: 90vh;
+
+    overflow-x: hidden;
+    box-sizing: border-box;
+
+    padding-inline: 8%;
     padding-block: 4rem;
 
     background: transparent;
 
-    border-bottom: 1px solid ${(props) => props.theme.COLORS.SECONDARY_ORANGE};
+    border-bottom: 1.5px solid ${(props) => props.theme.COLORS.SECONDARY_ORANGE};
 `

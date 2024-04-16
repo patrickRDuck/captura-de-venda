@@ -12,7 +12,7 @@ export function App() {
         <h1>O curso</h1>
 
         <h2>
-            Texto introdutório sobre o curso deve ser inserido aqui
+            Texto introdutório sobre o curso deve ser inserido aqui alguma coisa alguma coisa alguma coisa alguma coisa 
         </h2>
 
         <Button />
