@@ -4,6 +4,7 @@ import { IPropsTheme } from "../../styles/theme";
 export const Container = styled.div<IPropsTheme>`
 
     div:nth-child(2) {
+        justify-content: space-between;
 
         div {
             display: flex;

@@ -6,15 +6,14 @@ export const Container = styled.div<IPropsTheme>`
     flex-direction: column;
     gap: 3rem;
     align-items: center;
-    justify-content: space-between;
 
-    height: 80vh;
+    min-height: 80vh;
     width: 100vw;
 
     overflow-x: hidden;
     box-sizing: border-box;
 
-    padding-inline: 8%;
+    padding-inline: 6%;
     padding-block: 4rem;
 
     background: transparent;

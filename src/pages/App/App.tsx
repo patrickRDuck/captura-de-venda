@@ -1,9 +1,16 @@
+import { useState } from "react";
 import { Button } from "../../components/button/Button";
 import { Countdown } from "../../components/countdown/Countdown";
 import { Section } from "../../components/section/Section";
+import { Timeline } from "../../components/timeline/Timeline";
 import { Container } from "./app-styles";
 
 export function App() {
+  const [inView, setInView] = useState<boolean>()
+  const [inView2, setInView2] = useState<boolean>()
+  const [inView3, setInView3] = useState<boolean>()
+  const [inView4, setInView4] = useState<boolean>()
+
   return (
     <Container>
       <Countdown />
@@ -17,6 +24,24 @@ export function App() {
         </div>
           
         <Button />
+      </Section>
+
+      <Section>
+        <Timeline view={inView} setView={setInView} direction="left">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae iste atque dolores eius quaerat consequatur debitis molestias numquam totam, nihil dolor odio repellat amet, voluptatem soluta repudiandae in. Iure, saepe! 
+        </Timeline>
+
+        <Timeline view={inView2} setView={setInView2} direction="right">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae eum doloremque quaerat necessitatibus quod sunt deserunt dolorum ipsum alias fugiat reprehenderit nulla repellat assumenda amet, ut non accusantium rem qui.
+        </Timeline>
+
+        <Timeline view={inView3} setView={setInView3} direction="left">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae eum doloremque quaerat necessitatibus quod sunt deserunt dolorum ipsum alias fugiat reprehenderit nulla repellat assumenda amet, ut non accusantium rem qui.
+        </Timeline>
+
+        <Timeline view={inView4} setView={setInView4} direction="right">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae eum doloremque quaerat necessitatibus quod sunt deserunt dolorum ipsum alias fugiat reprehenderit nulla repellat assumenda amet, ut non accusantium rem qui.
+        </Timeline>
       </Section>
     </Container>
   )
