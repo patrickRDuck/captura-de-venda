@@ -4,10 +4,12 @@ import { IPropsTheme } from "../../styles/theme";
 export const Container = styled.div<IPropsTheme>`
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
     align-items: center;
+    justify-content: space-between;
 
-    height: 90vh;
+    height: 80vh;
+    width: 100vw;
 
     overflow-x: hidden;
     box-sizing: border-box;

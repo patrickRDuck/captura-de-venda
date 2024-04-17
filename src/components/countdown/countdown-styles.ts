@@ -12,7 +12,7 @@ export const Container = styled.div<IPropsTheme>`
     justify-content: center;
     gap: 1.4rem;
 
-    box-shadow: 1px 4px 23px 1px rgba(255,90,0,0.3);
+    box-shadow: 0px 4px 20px 3px rgba(255,90,0,0.3);
     border-radius: 0.8rem 0.8rem 9rem 9rem;
 
     background: rgb(255,90,0);
@@ -27,7 +27,7 @@ export const Container = styled.div<IPropsTheme>`
         color: ${(props) => props.theme.COLORS.DARK_BLUE};
 
         > strong {
-            font-size: 2.3rem;
+            font-size: 2.2rem;
         }
 
         > span {

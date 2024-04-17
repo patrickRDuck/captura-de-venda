@@ -8,13 +8,14 @@ export function App() {
     <Container>
       <Countdown />
       <Section>
+        <div>
+          <h1>RC30K</h1>
 
-        <h1>O curso</h1>
-
-        <h2>
-            Texto introdutório sobre o curso deve ser inserido aqui alguma coisa alguma coisa alguma coisa alguma coisa 
-        </h2>
-
+          <h2>
+            Domine a Arte da Representação Comercial e Venda Mais!<br />
+          </h2>
+        </div>
+          
         <Button />
       </Section>
     </Container>

@@ -4,8 +4,14 @@ import { IPropsTheme } from "../../styles/theme";
 export const Container = styled.div<IPropsTheme>`
 
     div:nth-child(2) {
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
         h1 {
-            font-family: "Limelight", sans-serif;
+            font-family: "Sofia", cursive;
             font-size: 6rem;
             font-weight: 700;
             text-align: center;
@@ -16,16 +22,22 @@ export const Container = styled.div<IPropsTheme>`
         }
 
         h2 {
-            width: 90%;
+            max-width: 100%;
 
             text-align: center;
-            font-size: 2.7rem;
+            letter-spacing: .1rem;
+            font-size: 2.6rem;
+            font-family: "Merriweather", serif;
 
             background: linear-gradient(322deg, rgba(255,90,0,1) 9%, rgba(241,116,5,1) 43%, rgba(241,116,5,1) 58%, rgba(255,90,0,1) 91%);
             background-clip: text;
             background-size: 100px 100px;
             color: transparent;
             animation: rgb 3s infinite linear;
+        }
+
+        button {
+            justify-self: end;
         }
     }
 
