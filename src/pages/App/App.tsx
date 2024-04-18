@@ -6,6 +6,7 @@ import { Timeline } from "../../components/timeline/Timeline";
 import { Container } from "./app-styles";
 import { Input } from "../../components/input/Input";
 import { Forms } from "../../components/forms/Forms";
+import { Footer } from "../../components/footer/Footer";
 
 export function App() {
   const [inView, setInView] = useState<boolean>()
@@ -61,6 +62,8 @@ export function App() {
 
           <Button dark="true" />
         </Forms>
+
+        <Footer />
       </Section>
     </Container>
   )

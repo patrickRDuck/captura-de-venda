@@ -11,14 +11,16 @@ export const Container = styled.div<IPropsContainer>`
     gap: 3rem;
     align-items: center;
 
-    min-height: 90vh;
+    min-height: 89vh;
     width: 100vw;
+
+    position: relative;
 
     overflow-x: hidden;
     box-sizing: border-box;
 
     padding-inline: 6%;
-    padding-block: 4rem;
+    padding-block: 5rem;
 
     background: ${(props) => props.backgroundOrange ? "linear-gradient(90deg, rgba(255,90,0,1) 5%, rgba(241,116,5,1) 50%, rgba(255,90,0,1) 95%)" : "transparent"};
 
