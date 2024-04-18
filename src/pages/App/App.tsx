@@ -7,6 +7,7 @@ import { Container } from "./app-styles";
 import { Input } from "../../components/input/Input";
 import { Forms } from "../../components/forms/Forms";
 import { Footer } from "../../components/footer/Footer";
+import logo from "../../assets/nome-logo.png"
 
 export function App() {
   const [inView, setInView] = useState<boolean>()
@@ -19,7 +20,10 @@ export function App() {
       <Countdown />
       <Section>
         <div>
-          <h1>RC30K</h1>
+          <div>
+            <h1>R<span>C3</span>0K</h1>
+            <img src={logo} alt="" />
+          </div>
 
           <h2>
             Domine a Arte da Representação Comercial e Venda Mais!<br />
