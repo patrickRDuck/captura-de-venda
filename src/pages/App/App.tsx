@@ -52,7 +52,7 @@ export function App() {
           <strong>
             Cadastre-se<br />agora!
           </strong>
-          <p>Evento ao vivo e online</p>
+          <p>Mentoria ao vivo e online</p>
         </div>
 
         <Forms>
