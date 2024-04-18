@@ -25,5 +25,5 @@ export const Container = styled.div<IPropsContainer>`
 
     background: ${(props) => props.background_orange ? "linear-gradient(90deg, rgba(255,90,0,1) 5%, rgba(241,116,5,1) 50%, rgba(255,90,0,1) 95%)" : "transparent"};
 
-    border-bottom: ${(props) => props.notborder ? "none" : "1.5px solid ${(props) => props.theme.COLORS.SECONDARY_ORANGE}"};
+    border-bottom: ${(props) => props.notborder === "true" ? "none" : `1.5px solid ${props.theme.COLORS.SECONDARY_ORANGE}`};
 `
