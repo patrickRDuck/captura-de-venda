@@ -47,7 +47,7 @@ export function App() {
         </Timeline>
       </Section>
 
-      <Section backgroundOrange={true}>
+      <Section notborder="true" background_orange="true">
         <div>
           <strong>
             Cadastre-se<br />agora!
