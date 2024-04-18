@@ -3,12 +3,12 @@ import { ComponentProps } from "react";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 
 interface IPropsButton extends ComponentProps<"button"> {
-
+    dark?: "true"
 }
 
-export function Button(props: IPropsButton) {
+export function Button({dark, ...props}: IPropsButton) {
     return(
-        <Container {...props}>
+        <Container dark={dark} {...props}>
             <FaRegArrowAltCircleRight size={29}  />
 
             <span>Quero me cadastrar</span>

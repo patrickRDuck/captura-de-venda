@@ -4,6 +4,8 @@ import { Countdown } from "../../components/countdown/Countdown";
 import { Section } from "../../components/section/Section";
 import { Timeline } from "../../components/timeline/Timeline";
 import { Container } from "./app-styles";
+import { Input } from "../../components/input/Input";
+import { Forms } from "../../components/forms/Forms";
 
 export function App() {
   const [inView, setInView] = useState<boolean>()
@@ -42,6 +44,23 @@ export function App() {
         <Timeline view={inView4} setView={setInView4} direction="right">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae eum doloremque quaerat necessitatibus quod sunt deserunt dolorum ipsum alias fugiat reprehenderit nulla repellat assumenda amet, ut non accusantium rem qui.
         </Timeline>
+      </Section>
+
+      <Section backgroundOrange={true}>
+        <div>
+          <strong>
+            Cadastre-se<br />agora!
+          </strong>
+          <p>Evento ao vivo e online</p>
+        </div>
+
+        <Forms>
+          <Input placeholder="Insira seu nome"/>
+          <Input placeholder="Insira seu E-mail"/>
+          <Input placeholder="Telefone"/>
+
+          <Button dark="true" />
+        </Forms>
       </Section>
     </Container>
   )

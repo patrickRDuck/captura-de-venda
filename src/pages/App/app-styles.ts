@@ -1,9 +1,11 @@
 import styled from "styled-components";
 import { IPropsTheme } from "../../styles/theme";
 
+
+
 export const Container = styled.div<IPropsTheme>`
 
-    div:nth-child(2) {
+    > div:nth-child(2) {
         justify-content: space-between;
 
         div {
@@ -39,6 +41,37 @@ export const Container = styled.div<IPropsTheme>`
 
         button {
             justify-self: end;
+        }
+    }
+
+    > div:nth-child(3) {
+        > div:first-child {
+            margin-top: 1.2rem;
+        }
+    }
+
+    > div:nth-child(4) {
+
+        > div:first-child {
+            display: flex;
+            flex-direction: column;
+            gap: 1.3rem;
+
+            text-align: center;
+            font-family: "Merriweather", serif;
+
+            > strong {
+                font-size: 3.6rem;
+                font-weight: 900;
+                color: ${(props) => props.theme.COLORS.DARK_BLUE};
+                text-shadow: 3px 1.5px 3px rgba(255, 255, 255, 0.3);
+            }
+    
+            > p {
+                font-size: 2.2rem;
+                color: white;
+                text-shadow: 3px 1.5px 3px rgba(11, 27, 35, 0.97);
+            }
         }
     }
 

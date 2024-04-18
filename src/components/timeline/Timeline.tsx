@@ -9,9 +9,7 @@ interface IPropsTimeline extends ComponentProps<"div">{
 }
 
 export function Timeline({direction, children, view, setView, ...rest}: IPropsTimeline) {
-    const { ref: myRef, inView, entry} = useInView()
- 
-    console.log(entry)
+    const { ref: myRef, inView} = useInView()
 
     useEffect(() => {
         if(setView) {
