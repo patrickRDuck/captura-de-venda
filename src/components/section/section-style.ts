@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { IPropsTheme } from "../../styles/theme";
 
 interface IPropsContainer extends IPropsTheme {
-    background_orange?: "true"
+    background_black?: "true"
     notborder?: "true"
 }
 
@@ -23,7 +23,7 @@ export const Container = styled.div<IPropsContainer>`
     padding-inline: 6%;
     padding-block: 5rem;
 
-    background: ${(props) => props.background_orange ? "linear-gradient(90deg, rgba(255,90,0,1) 5%, rgba(241,116,5,1) 50%, rgba(255,90,0,1) 95%)" : "transparent"};
+    background: ${(props) => props.background_black ? "linear-gradient(93deg, rgba(6,15,20,1) 20%, rgba(14,22,27,1) 35%, rgba(26,31,34,1) 45%, rgba(26,31,34,1) 55%, rgba(14,22,27,1) 65%, rgba(6,15,20,1) 80%);" : "transparent"};
 
     border-bottom: ${(props) => props.notborder === "true" ? "none" : `1.5px solid ${props.theme.COLORS.SECONDARY_ORANGE}`};
 `

@@ -20,6 +20,7 @@ export const Container = styled.div<IPropsTheme>`
     right: 0;
 
     background-color: ${(props) => props.theme.COLORS.DARK_BLUE};
+    border-top: 1.5px solid ${(props) => props.theme.COLORS.SECONDARY_ORANGE};
 
     > div:first-child {
         display: flex;

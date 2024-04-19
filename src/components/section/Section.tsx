@@ -2,13 +2,13 @@ import { ComponentProps } from "react";
 import { Container } from "./section-style";
 
 interface IPropsSection extends ComponentProps<"div"> {
-    background_orange?: "true"
+    background_black?: "true"
     notborder?: "true"
 }
 
-export function Section({background_orange, notborder, children}: IPropsSection) {
+export function Section({background_black, notborder, children}: IPropsSection) {
     return (
-        <Container notborder={notborder} background_orange={background_orange}>
+        <Container notborder={notborder} background_black={background_black}>
             {children}
         </Container>
     )

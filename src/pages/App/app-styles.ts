@@ -5,7 +5,7 @@ import { IPropsTheme } from "../../styles/theme";
 
 export const Container = styled.div<IPropsTheme>`
 
-    > div:nth-child(2) {
+    > div:nth-child(1) {
         justify-content: space-between;
 
         div {
@@ -63,6 +63,23 @@ export const Container = styled.div<IPropsTheme>`
         }
     }
 
+    > div:nth-child(2) {
+        > strong:first-child {
+            font-size: 3.6rem;
+            text-align: center;
+            color: white;
+            text-shadow: 4px 1px 0px rgb(255, 90, 0, 0.8);
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #000;
+        }
+
+        > div:last-child {
+            display: flex;
+            flex-direction: column;
+            gap: 7rem;
+        }
+    }
+
     > div:nth-child(3) {
         > div:first-child {
             margin-top: 1.2rem;
@@ -72,24 +89,35 @@ export const Container = styled.div<IPropsTheme>`
     > div:nth-child(4) {
 
         > div:first-child {
-            display: flex;
-            flex-direction: column;
-            gap: 1.3rem;
+            margin-block: 4rem;
+            width: 100%;
+            padding: 1rem;
 
-            text-align: center;
-            font-family: "Merriweather", serif;
+            border: 2px solid white;
+            border-radius: 4rem;
+            background-color: ${(props) => props.theme.COLORS.SECONDARY_ORANGE};
 
-            > strong {
-                font-size: 3.6rem;
-                font-weight: 900;
-                color: ${(props) => props.theme.COLORS.DARK_BLUE};
-                text-shadow: 3px 1.5px 3px rgba(255, 255, 255, 0.3);
-            }
+            > div {
+                display: flex;
+                flex-direction: column;
+                gap: 1.3rem;
     
-            > p {
-                font-size: 2.2rem;
-                color: white;
-                text-shadow: 3px 1.5px 3px rgba(11, 27, 35, 0.97);
+                text-align: center;
+                font-family: "Merriweather", serif;
+    
+                > strong {
+                    font-size: 3.6rem;
+                    font-weight: 900;
+                    color: ${(props) => props.theme.COLORS.DARK_BLUE};
+                    text-shadow: 3px 1.5px 3px rgba(255, 255, 255, 0.3);
+                }
+        
+                > p {
+                    font-size: 2.2rem;
+                    color: white;
+                    text-shadow: 3px 1.5px 3px rgba(11, 27, 35, 0.97);
+                }
+
             }
         }
     }

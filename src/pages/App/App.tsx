@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Button } from "../../components/button/Button";
-import { Countdown } from "../../components/countdown/Countdown";
 import { Section } from "../../components/section/Section";
 import { Timeline } from "../../components/timeline/Timeline";
 import { Container } from "./app-styles";
@@ -8,6 +7,7 @@ import { Input } from "../../components/input/Input";
 import { Forms } from "../../components/forms/Forms";
 import { Footer } from "../../components/footer/Footer";
 import logo from "../../assets/nome-logo.png"
+import { EnumeratedTopic } from "../../components/enumerated-topic/Enumerated-topic";
 
 export function App() {
   const [inView, setInView] = useState<boolean>()
@@ -17,7 +17,6 @@ export function App() {
 
   return (
     <Container>
-      <Countdown />
       <Section>
         <div>
           <div>
@@ -31,6 +30,30 @@ export function App() {
         </div>
           
         <Button />
+      </Section>
+
+      <Section background_black="true">
+        <strong>Como funciona a mentoria RC30K</strong>
+
+        <div>
+          <EnumeratedTopic 
+           number={1}
+           title="Desenvolvimento de mentalidade"
+           itens={["Mudança de mentalidade", "Roda da vida", "Propósito e missão de vida", "V20"]}
+          />
+
+          <EnumeratedTopic 
+           number={2}
+           title="Despertando seu representante"
+           itens={["Vida pessoal X profissional", "Alcançando metas", "O poder da disciplina", "Construindo hábitos", "Coragem"]}
+          />
+          
+          <EnumeratedTopic 
+           number={3}
+           title="Vender em alta perfomance"
+           itens={["Mentalidade de sucesso", "A arte das vendas", "Criando parceiros", "Funil de vendas", "Gestão de vendas", "Pós-venda"]}
+          />
+        </div>
       </Section>
 
       <Section>
@@ -51,21 +74,24 @@ export function App() {
         </Timeline>
       </Section>
 
-      <Section notborder="true" background_orange="true">
+      <Section notborder="true">
         <div>
-          <strong>
-            Cadastre-se<br />agora!
-          </strong>
-          <p>Mentoria ao vivo e online</p>
+
+          <div>
+            <strong>
+              Cadastre-se<br />agora!
+            </strong>
+            <p>Mentoria ao vivo e online</p>
+          </div>
+
+          <Forms>
+            <Input placeholder="Insira seu nome"/>
+            <Input placeholder="Insira seu E-mail"/>
+            <Input placeholder="Telefone"/>
+
+            <Button dark="true" />
+          </Forms>
         </div>
-
-        <Forms>
-          <Input placeholder="Insira seu nome"/>
-          <Input placeholder="Insira seu E-mail"/>
-          <Input placeholder="Telefone"/>
-
-          <Button dark="true" />
-        </Forms>
 
         <Footer />
       </Section>
