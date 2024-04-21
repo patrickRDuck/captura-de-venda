@@ -95,7 +95,7 @@ export const Container = styled.div<IPropsTheme>`
 
             border: 2px solid white;
             border-radius: 4rem;
-            background-color: ${(props) => props.theme.COLORS.SECONDARY_ORANGE};
+            background-color: ${(props) => props.theme.COLORS.MAIN_ORANGE};
 
             > div {
                 display: flex;

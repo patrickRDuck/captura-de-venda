@@ -19,7 +19,7 @@ export const Container = styled.button<IPropsContainer>`
 
     background-color: ${(props) => props.dark ? props.theme.COLORS.DARK_BLUE : props.theme.COLORS.SECONDARY_ORANGE};
 
-    color: ${(props) => props.dark ? props.theme.COLORS.MAIN_ORANGE : props.theme.COLORS.WHITE};
+    color: ${(props) => props.dark ? props.theme.COLORS.WHITE : props.theme.COLORS.WHITE};
     font-size: 2.4rem;
     text-shadow: 3px 1.5px 3px rgba(11, 27, 35, 0.97);
 `
