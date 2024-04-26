@@ -6,7 +6,7 @@ import { Container } from "./app-styles";
 import { Input } from "../../components/input/Input";
 import { Forms } from "../../components/forms/Forms";
 import { Footer } from "../../components/footer/Footer";
-import logo from "../../assets/nome-logo.png"
+import logo from "../../assets/logo-rc30k.png"
 import { EnumeratedTopic } from "../../components/enumerated-topic/Enumerated-topic";
 
 export function App() {
@@ -22,6 +22,10 @@ export function App() {
           <div>
             <h1>R<span>C3</span>0K</h1>
             <img src={logo} alt="" />
+          </div>
+
+          <div>
+            <p>Mentoria individual</p>
           </div>
 
           <h2>

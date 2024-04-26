@@ -11,36 +11,31 @@ export const Container = styled.div<IPropsTheme>`
         div {
             display: flex;
             flex-direction: column;
+            align-items: center;
             gap: 0rem;
 
-            > div {
+            > div:first-child {
                 h1 {
                     display: none
                 }
 
                 > img {
-                    height: 10.8rem;
+                    height: 7rem;
                     width: 100%;
                     object-fit: contain;
                 }
             }
 
-            > h1 {
-                font-family: "IBM Plex Serif", serif;
-                font-size: 6rem;
-                font-weight: 400;
-                text-align: center;
-                color: ${(props) => props.theme.COLORS.SECONDARY_ORANGE};
-                letter-spacing: -.1rem;
-    
-                -webkit-text-stroke-width: 1px;
-                -webkit-text-stroke-color: rgba(17, 38, 49, 0.25);
-    
-                span {
-                    letter-spacing: -.7rem;
-                    margin-inline-end: .2rem;
-                }
-            }
+           > p {
+                display: block;
+                padding: .5rem 1.5rem;
+                margin: 1rem 0rem 5rem 0rem;
+
+                background-color: ${(props) => props.theme.COLORS.MAIN_ORANGE};
+                border-radius: 2rem;
+
+                font-size: 2rem;
+           }
     
             > h2 {
                 max-width: 100%;
