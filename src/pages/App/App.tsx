@@ -45,18 +45,21 @@ export function App() {
            number={1}
            title="Desenvolvimento de mentalidade"
            itens={["Mudança de mentalidade", "Roda da vida", "Propósito e missão de vida", "V20"]}
+           key={1}
           />
 
           <EnumeratedTopic 
            number={2}
            title="Despertando seu representante"
            itens={["Vida pessoal X profissional", "Alcançando metas", "O poder da disciplina", "Construindo hábitos", "Coragem"]}
+           key={2}
           />
           
           <EnumeratedTopic 
            number={3}
            title="Vender em alta perfomance"
            itens={["Mentalidade de sucesso", "A arte das vendas", "Criando parceiros", "Funil de vendas", "Gestão de vendas", "Pós-venda"]}
+           key={3}
           />
         </div>
       </Section>
