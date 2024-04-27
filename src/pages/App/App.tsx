@@ -6,7 +6,8 @@ import { Container } from "./app-styles";
 import { Input } from "../../components/input/Input";
 import { Forms } from "../../components/forms/Forms";
 import { Footer } from "../../components/footer/Footer";
-import logo from "../../assets/logo-rc30k.png"
+import logo from "../../assets/logo-rc30k.png";
+import sandraPhoto from "../../assets/sandra-foto.png";
 import { EnumeratedTopic } from "../../components/enumerated-topic/Enumerated-topic";
 
 export function App() {
@@ -76,6 +77,22 @@ export function App() {
         <Timeline view={inView4} setView={setInView4} direction="right">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae eum doloremque quaerat necessitatibus quod sunt deserunt dolorum ipsum alias fugiat reprehenderit nulla repellat assumenda amet, ut non accusantium rem qui.
         </Timeline>
+      </Section>
+
+      <Section>
+        <div>
+          <img src={sandraPhoto} alt="" />
+        </div>
+
+        <div>
+          <strong>
+            Quem é?
+            <span>Sandra Barbosa</span>
+          </strong>
+          <p>
+            Filha de Eloi e Maria, sou a caçula de 9 irmãos, tenho 3 filhos: Irla, Nick e João Miguel. Esposa/socia de João Paulo. Onde somos sócios de 2 empresas:Js Concultoria e Representações e a Vital Vibe. Sou fundadora da SB Consultoria e Treinamentos, onde faço atendimentos de consultoria e mentorias individuais e em grupos. Formada em administração de empresas, especialista em gestão estratégica de vendas, vendedora há 25 anos, sendo 10 como representante comercial, há dois anos venho estudando e aplicando em mim e nos clientes técnicas de desenvolvimento humano, vendas e gestão de pessoas.
+          </p>
+        </div>
       </Section>
 
       <Section notborder="true">

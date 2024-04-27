@@ -31,7 +31,7 @@ export const Container = styled.div<IPropsTheme>`
                 padding: .5rem 1.5rem;
                 margin: 1rem 0rem 5rem 0rem;
 
-                background-color: ${(props) => props.theme.COLORS.MAIN_ORANGE};
+                background-color: ${(props) => props.theme.COLORS.SECONDARY_ORANGE};
                 border-radius: 2rem;
 
                 font-size: 2rem;
@@ -82,6 +82,62 @@ export const Container = styled.div<IPropsTheme>`
     }
 
     > div:nth-child(4) {
+        > div:first-child {
+            width: 100%;
+            height: 20rem;
+
+            position: absolute;
+            top: .1rem;
+            left: 0;
+
+            overflow: hidden;
+            img {
+                object-fit: cover;
+                object-position: 0% 10%;
+                width: 100%;
+                height: 100%;
+                filter: blur(1px);
+            }
+
+            &::after {
+                content: "";
+
+                position: absolute;
+                top: 0rem;
+                left: 0;
+
+                width: 100%;
+                height: 20rem;
+
+                background-color: ${(props) => props.theme.COLORS.SECONDARY_ORANGE};
+                opacity: 50%;
+            }
+        }
+
+        > div:last-child {
+            margin-top: 22rem;
+
+            > strong {
+                font-size: 3rem;
+                color: white;
+
+                > span {
+                    display: block;
+                    margin: 1.2rem 0;
+                    border-bottom: 3px dashed ${(props) => props.theme.COLORS.MAIN_ORANGE};
+                    width: 25rem;
+                }
+            }
+
+            > p {
+                font-size: 1.8rem;
+                color: rgba(255, 255, 255, 0.9);
+                text-align: left;
+            }
+        }
+    }
+
+    > div:last-child {
 
         > div:first-child {
             margin-block: 4rem;
