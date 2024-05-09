@@ -11,7 +11,7 @@ export function Button({dark, ...props}: IPropsButton) {
         <Container dark={dark} {...props}>
             <FaRegArrowAltCircleRight size={29}  />
 
-            <span>Quero me cadastrar</span>
+            Quero me cadastrar
         </Container>
     )
 }

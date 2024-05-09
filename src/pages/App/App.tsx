@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, MouseEvent, useRef} from "react";
 import { Button } from "../../components/button/Button";
 import { Section } from "../../components/section/Section";
 import { Timeline } from "../../components/timeline/Timeline";
@@ -15,6 +15,22 @@ export function App() {
   const [inView2, setInView2] = useState<boolean>()
   const [inView3, setInView3] = useState<boolean>()
   const [inView4, setInView4] = useState<boolean>()
+
+  const registerRef = useRef<HTMLDivElement>(null)
+
+  function dragDown(event: MouseEvent) {
+    event.preventDefault()
+  
+    if(registerRef.current !== null) {
+      const {top: distance} = registerRef.current.getBoundingClientRect()
+
+      window.scroll({
+        top: distance,
+        behavior: "smooth"
+      })
+    }
+
+  }
 
   return (
     <Container>
@@ -34,7 +50,7 @@ export function App() {
           </h2>
         </div>
           
-        <Button />
+        <Button onClick={(event) => dragDown(event)}/>
       </Section>
 
       <Section background_black="true">
@@ -65,6 +81,22 @@ export function App() {
       </Section>
 
       <Section>
+        <div>
+          <img src={sandraPhoto} alt="" />
+        </div>
+
+        <div>
+          <strong>
+            Quem é?
+            <span>Sandra Barbosa</span>
+          </strong>
+          <p>
+            Filha de Eloi e Maria, sou a caçula de 9 irmãos, tenho 3 filhos: Irla, Nick e João Miguel. Esposa/socia de João Paulo. Onde somos sócios de 2 empresas:Js Concultoria e Representações e a Vital Vibe. Sou fundadora da SB Consultoria e Treinamentos, onde faço atendimentos de consultoria e mentorias individuais e em grupos. Formada em administração de empresas, especialista em gestão estratégica de vendas, vendedora há 25 anos, sendo 10 como representante comercial, há dois anos venho estudando e aplicando em mim e nos clientes técnicas de desenvolvimento humano, vendas e gestão de pessoas.
+          </p>
+        </div>
+      </Section>
+
+      <Section>
         <Timeline view={inView} setView={setInView} direction="left">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae iste atque dolores eius quaerat consequatur debitis molestias numquam totam, nihil dolor odio repellat amet, voluptatem soluta repudiandae in. Iure, saepe! 
         </Timeline>
@@ -82,38 +114,22 @@ export function App() {
         </Timeline>
       </Section>
 
-      <Section>
-        <div>
-          <img src={sandraPhoto} alt="" />
-        </div>
-
-        <div>
-          <strong>
-            Quem é?
-            <span>Sandra Barbosa</span>
-          </strong>
-          <p>
-            Filha de Eloi e Maria, sou a caçula de 9 irmãos, tenho 3 filhos: Irla, Nick e João Miguel. Esposa/socia de João Paulo. Onde somos sócios de 2 empresas:Js Concultoria e Representações e a Vital Vibe. Sou fundadora da SB Consultoria e Treinamentos, onde faço atendimentos de consultoria e mentorias individuais e em grupos. Formada em administração de empresas, especialista em gestão estratégica de vendas, vendedora há 25 anos, sendo 10 como representante comercial, há dois anos venho estudando e aplicando em mim e nos clientes técnicas de desenvolvimento humano, vendas e gestão de pessoas.
-          </p>
-        </div>
-      </Section>
-
       <Section notborder="true">
         <div>
 
-          <div>
+          <div ref={registerRef}>
             <strong>
               Cadastre-se<br />agora!
             </strong>
             <p>Mentoria ao vivo e online</p>
           </div>
 
-          <Forms>
+          <Forms >
             <Input placeholder="Insira seu nome"/>
             <Input placeholder="Insira seu E-mail"/>
             <Input placeholder="Telefone"/>
 
-            <Button dark="true" />
+            <Button dark="true"/>
           </Forms>
         </div>
 

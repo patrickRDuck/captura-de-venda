@@ -78,12 +78,6 @@ export const Container = styled.div<IPropsTheme>`
 
     > div:nth-child(3) {
         > div:first-child {
-            margin-top: 1.2rem;
-        }
-    }
-
-    > div:nth-child(4) {
-        > div:first-child {
             width: 100%;
             height: 20rem;
 
@@ -137,6 +131,13 @@ export const Container = styled.div<IPropsTheme>`
             }
         }
     }
+    
+    > div:nth-child(4) {
+        > div:first-child {
+            margin-top: 1.2rem;
+        }
+    }
+
 
     > div:last-child {
 
