@@ -1,5 +1,6 @@
 import { ComponentProps } from "react";
-import { Container } from "./enumerated-topic-styles";
+import { Container, Li } from "./enumerated-topic-styles";
+import { useInView } from "react-intersection-observer";
 
 interface IEnumaretedTopicProps extends ComponentProps<"div"> {
     number: number
@@ -8,6 +9,8 @@ interface IEnumaretedTopicProps extends ComponentProps<"div"> {
 }
 
 export function EnumeratedTopic({number, title, itens, ...rest}: IEnumaretedTopicProps) {
+    const { ref: myRef, inView} = useInView()
+
     return (
         <Container {...rest}>
             <div>
@@ -19,8 +22,15 @@ export function EnumeratedTopic({number, title, itens, ...rest}: IEnumaretedTopi
 
                 <ol>
                     {
-                        itens.map((item) => (
-                            <li>{item}</li>
+                        itens.map((item, index) => (
+                            <Li 
+                             ref={myRef}
+                             key={index}
+                             delay={index}
+                             $inView={inView}
+                            >
+                                {item}
+                            </Li>
                         ))
                     }
                 </ol>

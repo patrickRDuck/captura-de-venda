@@ -49,12 +49,13 @@ export const Container = styled.div<IPropsTheme>`
                 background-clip: text;
                 background-size: 100px 100px;
                 color: transparent;
-                animation: rgb 3s infinite linear;
+                animation: rgb 3s infinite linear, topToBottom 500ms ease-out forwards;
             }
         }
 
         button {
             justify-self: end;
+            animation: upward 500ms ease-out 470ms backwards;
         }
     }
 
@@ -192,6 +193,38 @@ export const Container = styled.div<IPropsTheme>`
 
         100% {
             background-position: 0 0;
+        }
+    }
+
+    @keyframes upward {
+        0% {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        50% {
+            opacity: .4;
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes topToBottom {
+        0% {
+            opacity: 0;
+            transform: translateY(-70px);
+        }
+
+        50% {
+            opacity: .4;
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
         }
     }
 `

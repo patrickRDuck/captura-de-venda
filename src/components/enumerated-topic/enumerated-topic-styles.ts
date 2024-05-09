@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import { IPropsTheme } from "../../styles/theme";
 
+interface IPropsLi extends IPropsTheme {
+    delay: number
+    $inView: boolean
+}
+
 export const Container = styled.div<IPropsTheme>`
     display: flex;
     flex-direction: column;
@@ -35,8 +40,6 @@ export const Container = styled.div<IPropsTheme>`
         width: 75%;
         padding-inline: 2rem;
 
-    
-
         > strong:first-child {
             font-size: 2.6rem;
             color: ${(props) => props.theme.COLORS.MAIN_ORANGE};
@@ -46,14 +49,49 @@ export const Container = styled.div<IPropsTheme>`
         > ol {
             margin-left: 1.7rem;
 
-            > li {
-                font-size: 1.7rem;
-                color: #7d7d7d:
+            > li:nth-child(odd) {
+                margin-block: .7rem;
             }
-
-        > li:nth-child(odd) {
-            margin-block: .7rem;
         }
+    }
+`
+
+export const Li = styled.li<IPropsLi>`
+    font-size: 1.7rem;
+    color: #FFF;
+
+    ${
+        ({$inView, delay}) => $inView ? `animation: leftToRight 400ms ease-out ${delay * 400}ms backwards;` : `animation: rightToLeft 400ms ease-out forwards;`
+    }
+
+    @keyframes leftToRight {
+        0% {
+            transform: translateX(-200px);
+            opacity: 0;
+        }
+
+        50% {
+            opacity: .7;
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    @keyframes rightToLeft {
+        0% {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+
+        50% {
+            opacity: .7;
+        }
+
+        100% {
+            opacity: 0;
+            transform: translateX(-200px);
         }
     }
 `
